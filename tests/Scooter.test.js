@@ -47,7 +47,7 @@ describe('scooter methods', function() {
     setTimeout(() => {
       expect(scooter.isBroken).toBe(false);
       done();
-    }, 5100);
+    }, 5000);
   });
 });
 

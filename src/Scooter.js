@@ -12,7 +12,7 @@ class Scooter{
 
     rent() {
         if (this.charge > 20 && !this.isBroken) {
-          this.user = user;
+          this.user = 'User 1';
           this.station = null;
         } else if (this.charge <= 20) {
           throw new Error("Scooter needs to charge");
@@ -27,14 +27,14 @@ class Scooter{
     }
 
     recharge() {
-      let charge = this.charge;
+      this.charge = 100;
       setInterval(() => {
-        if (charge < 100) {
-          charge++;
+        if (this.charge < 100) {
+          this.charge++;
           console.log(`Scooter ${this.serial} is now ${charge}% charged`);
         } else {
           console.log(`Scooter ${this.serial} is now fully charged`);
-          clearInterval();
+          clearInterval(this.intervalId);
         }
       }, 1000);
     }
