@@ -20,19 +20,11 @@ class Scooter{
           throw new Error("Scooter needs repair");
         }
       }
-
-
   
     dock(station) {
       this.station = station;
       this.user = null;
     }
-
-
-  
-    // recharge() {
-    //   this.charge = 100;
-    // }
 
     recharge() {
       let charge = this.charge;
@@ -53,15 +45,8 @@ class Scooter{
         console.log('Repair completed');
       }, 5000);
     }
+  }
 
-  // requestRepair() {
-  //   this.isBroken = true;
-  //   setTimeout(() => {
-  //     this.isBroken = false;
-  //     console.log(`Scooter with serial ${this.serial} has been repaired`);
-  //   }, 5000);
-  // }
- } 
   Scooter.nextSerial = 1;
 
 
